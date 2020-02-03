@@ -12,9 +12,25 @@ Recommended spec)
 
 AWS `m5a.xlarge` (4 Cores 16GB Ram) for beginners
 
-## One-line installer
+## How to install
 
-This command will initialize the poa sidechain on your server
+First, clone this repository and submodules
+
+    $ git clone --recurse-submodules -j3 https://github.com/ethercore/poa-launcher
+
+If you are setting up the clean vm from AWS, run `aws.sh` to install necessary dependencies
+
+    $ ./aws.sh
+
+And then run `init.sh` to install components at local environment
+
+    $ ./init.sh
+
+After initialized, you can start the services via `start.sh`
+
+    $ ./start.sh
+
+You can access the network dashboard at http://127.0.0.1:3000 and blockscout at http://127.0.0.1:4000
 
 ## PoA launcher composition
 

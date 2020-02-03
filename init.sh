@@ -1,8 +1,8 @@
 #!/bin/sh
 sudo cp bin/* /usr/local/bin
 sudo cp systemd/* /etc/systemd/system
-geth --datadir nodes/geth init geth.json
-geth --datadir nodes/geth2 init geth.json
+geth --datadir nodes/geth --nousb init geth.json
+geth --datadir nodes/geth2 --nousb init geth.json
 cd eth-netstats && npm i && cd ..
 cd eth-net-intelligence-api && npm i && cd ..
 cp ws_secret.json eth-netstats

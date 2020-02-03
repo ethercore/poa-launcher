@@ -1,0 +1,24 @@
+[
+  {
+    "name"              : "node3-app",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "localhost",
+      "RPC_PORT"        : "8945",
+      "LISTENING_PORT"  : "30703",
+      "INSTANCE_NAME"   : "Geth PoA Validator 2",
+      "CONTACT_DETAILS" : "",
+      "WS_SERVER"       : "ws://127.0.0.1:3000",
+      "WS_SECRET"       : "poasidechain",
+      "VERBOSITY"       : 2
+    }
+  }
+]

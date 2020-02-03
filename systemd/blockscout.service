@@ -1,0 +1,15 @@
+[Unit]
+Description=Blockscout Explorer Daemon
+After=parity.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/poa-launcher/blockscout
+ExecStart=/usr/bin/mix phx.server
+KillMode=control-group
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

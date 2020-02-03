@@ -1,0 +1,15 @@
+[Unit]
+Description=Geth Node Daemon
+After=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu
+ExecStart=/usr/local/bin/geth --datadir="/home/ubuntu/poa-launcher/nodes/geth" --networkid=2020 --port=30503 --rpc --rpcport=8745 --nousb --cache=10000 --mine --miner.etherbase="0x31d05c2CFd341dDc1f7FA1aebE27E21379a61201" --miner.extradata="Geth PoA Validator 1" --txpool.pricelimit=0 --txpool.accountslots=200000 --txpool.globalslots=200000 --txpool.accountqueue=200000 --txpool.globalqueue=200000 --miner.gasprice=0 --miner.gastarget=210000000 --miner.gaslimit=210000000 --bootnodes="enode://d45875c480cbe72a6a17158991a1af6b1e3f643928c39302064dcd0b0d4429afd342b993064febc10b4f42a8f46bf631adedb0f353477efdffe87dc75bae013e@127.0.0.1:30303,enode://102ce55c5680dc2bd68a0adc6d914dc8512ac2ea2adb0b9b4f5e4200a7f67e6586d85834486e501903d22e56d21ee878a5140369b482bd459f763c5dfd4e5f9f@127.0.0.1:30703"
+KillMode=process
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

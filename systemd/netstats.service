@@ -1,0 +1,15 @@
+[Unit]
+Description=Netstats
+After=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/poa-launcher/eth-netstats
+ExecStart=/usr/bin/npm start
+KillMode=control-group
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Parity Node Daemon
+After=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu
+ExecStart=/usr/local/bin/parity --base-path="/home/ubuntu/poa-launcher/nodes/parity" --chain="/home/ubuntu/poa-launcher/parity.json" --no-warp --tracing=on --pruning=archive --db-compaction=ssd --fat-db=on --jsonrpc-interface=all --jsonrpc-hosts=all --jsonrpc-cors=all --jsonrpc-server-threads=10 --jsonrpc-threads=10 --jsonrpc-max-payload=10000 --bootnodes="enode://464101aea7a11ebc1d5013e015b459bad010c7814e98d980db375dc94f9f75096cf67eed83fc5500f1703cec292ba806978cc98e83f76007118808f5aae0b969@127.0.0.1:30503,enode://102ce55c5680dc2bd68a0adc6d914dc8512ac2ea2adb0b9b4f5e4200a7f67e6586d85834486e501903d22e56d21ee878a5140369b482bd459f763c5dfd4e5f9f@127.0.0.1:30703"
+KillMode=process
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

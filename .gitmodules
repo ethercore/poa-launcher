@@ -1,0 +1,9 @@
+[submodule "eth-netstats"]
+	path = eth-netstats
+	url = https://github.com/ethercore/eth-netstats
+[submodule "eth-net-intelligence-api"]
+	path = eth-net-intelligence-api
+	url = https://github.com/ethercore/eth-net-intelligence-api
+[submodule "blockscout"]
+	path = blockscout
+	url = https://github.com/ethercore/blockscout

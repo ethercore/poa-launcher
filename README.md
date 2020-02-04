@@ -1,7 +1,5 @@
 # EtherCore PoA Launcher
 
-![Kim launch](./meme.jpg)
-
 EtherCore PoA sidechain launcher
 
 ## Prerequisite
